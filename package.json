@@ -1,0 +1,16 @@
+{
+  "name": "jobsangola",
+  "version": "0.2.0",
+  "private": true,
+  "description": "JobsAngola: portal de empregos para Angola (MVP)",
+  "main": "server/index.js",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "SEED_DEMO=1 node server/index.js",
+    "test": "node --test test/api.test.js"
+  }
+}
