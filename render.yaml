@@ -1,0 +1,25 @@
+# Configuração de deploy para o Render (plano gratuito).
+# Ao criar o serviço a partir do repositório, o Render lê este ficheiro automaticamente.
+#
+# Atenção: no plano gratuito o disco é temporário. Os dados (contas, vagas, CVs)
+# são apagados quando o serviço reinicia ou é reimplantado.
+
+services:
+  - type: web
+    name: jobsangola
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/meta
+    envVars:
+      - key: NODE_VERSION
+        value: 22.23.4
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SEED_DEMO
+        value: "1"
+      - key: ADMIN_EMAIL
+        value: luisoft
+      - key: ADMIN_PASSWORD
+        value: luisoft2026
