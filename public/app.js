@@ -255,7 +255,7 @@
             <button class="btn full">Criar conta</button>
           </form>` : `
           <form class="form" data-form="entrar">
-            <label>E-mail<input type="email" name="email" required autocomplete="email"></label>
+            <label>E-mail ou utilizador<input type="text" name="email" required autocomplete="username"></label>
             <label>Senha<input type="password" name="password" required autocomplete="current-password"></label>
             <button class="btn full">Entrar</button>
           </form>`}

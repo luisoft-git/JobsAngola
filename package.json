@@ -10,7 +10,7 @@
   },
   "scripts": {
     "start": "node server/index.js",
-    "dev": "SEED_DEMO=1 node server/index.js",
+    "dev": "SEED_DEMO=1 ADMIN_EMAIL=luisoft ADMIN_PASSWORD=luisoft2026 node server/index.js",
     "test": "node --test test/api.test.js"
   }
 }

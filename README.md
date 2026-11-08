@@ -20,6 +20,8 @@ npm start
 
 Abra `http://localhost:3000`.
 
+**Área reservada ao administrador:** entre com o utilizador `luisoft` e a senha `luisoft2026`. O script `npm run dev` cria esta conta a partir de `ADMIN_EMAIL` e `ADMIN_PASSWORD`. Estas credenciais são só para desenvolvimento: altere-as ou remova-as antes de qualquer utilização real, e não use `npm run dev` em produção.
+
 Com `SEED_DEMO=1`, são criadas estas contas (senha `demo12345`):
 
 | Perfil | E-mail |

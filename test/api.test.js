@@ -179,3 +179,12 @@ test('frontend é servido com cabeçalhos de segurança e sem sair da pasta publ
   const fuga = await fetch(`${base}/%2e%2e/package.json`);
   assert.equal(fuga.status, 404);
 });
+
+test('administrador luisoft entra com utilizador e acede à área de moderação', async () => {
+  criarUtilizador(db, { nome: 'Luisoft', email: 'luisoft', password: 'luisoft2026', role: 'ADMIN' });
+  const login = await pedido('POST', '/api/auth/login', { corpo: { email: 'luisoft', password: 'luisoft2026' } });
+  assert.equal(login.status, 200);
+  assert.equal(login.dados.user.role, 'ADMIN');
+  const area = await pedido('GET', '/api/admin/pending', { token: login.dados.token });
+  assert.equal(area.status, 200);
+});
